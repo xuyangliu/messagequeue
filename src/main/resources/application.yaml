@@ -1,0 +1,30 @@
+spring:
+  output:
+    ansi:
+      enabled: detect
+  profiles:
+    active: dev
+  application:
+    name: hello-world
+server:
+  port: 9999
+rabbitmq:
+  node1:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  node2:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+logging:
+  path: ./log
+  file:
+    max-size: 10MB
+    max-history: 7
+  level:
+    root: info
+    com.peanut.messagequeue: debug
+
